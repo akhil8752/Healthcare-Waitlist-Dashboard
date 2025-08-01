@@ -1,69 +1,41 @@
-🔍 Project Overview
-This Power BI dashboard explores patient waitlist trends across specialties, case types, and age profiles. It helps healthcare providers identify key bottlenecks, monitor performance over time, and prioritize interventions.
+# 🏥 Healthcare Waitlist Dashboard (Power BI Project)
 
-The project was built to practice real-world data analysis skills and showcase practical dashboarding capabilities.
+This Power BI project analyzes patient waitlist data across different case types (*Outpatient, Day Case, Inpatient*), age profiles, and specialties. It helps visualize bottlenecks and trends over time, supporting data-driven healthcare decision-making.
 
-📁 Dataset Description
-Each record in the source data includes:
+---
 
-Patient_ID: Unique identifier
+## 📁 Dataset Overview
 
-Waitlist_Date: Entry date to waitlist
+Each record contains attributes like:
 
-Age: Patient age
+- **Case_Type**: Outpatient, Day Case, Inpatient  
+- **Age_Profile**: 0–15, 16–64, 65+  
+- **Archive_Date**: Snapshot date of the waitlist  
+- **Specialty_Name**: e.g. Cardiology, Orthopaedics, ENT  
+- **Time_Bands**: Wait time groupings (e.g. 0–3 months, 3–6 months)  
+- **Total Wait List**: Number of patients waiting  
 
-Specialty: Medical specialty (e.g., Cardiology)
+---
 
-Case_Type: Case classification (Elective/Emergency)
+## 🎯 Project Objective
 
-Status: Waitlist status (Active/Completed)
+- Compare waitlist volumes across months and years  
+- Highlight long-wait trends by **Case Type** and **Specialty**  
+- Enable dynamic slicing using age and time bands  
+- Identify service delivery bottlenecks and demand peaks  
 
-District: Hospital region
+---
 
-Gender: Patient gender
+## 🔍 Key Visuals & Metrics
 
-Entry_Channel: Registration method (Referral, Walk-in, etc.)
+- **KPI Cards**: Latest month vs. previous year waitlist totals  
+- **Donut Chart**: Waitlist distribution by Case Type  
+- **Bar Chart**: Wait times segmented by Age Profile  
+- **Line Charts**: Trends over time by Case Type  
+- **Top Specialties Table**: Sorted by highest waitlist count  
+- **Slicers**: Filters by Date Range, Cleanup Case Type & Age Group  
 
-🧩 Data Model Structure
-Table Name	Description
-Inpatient	Contains inpatient data and specialty breakdowns
-Outpatient	Focuses on outpatient volumes and age grouping
-All_Data	Aggregated table for summary metrics
-Mapping_Specialty	Maps and groups specialty names for uniform filtering
-Includes fields like Age_Profile, Specialty_Name, Case_Type, Median Wait List, PY Latest Month Wait List, and Archive_Date.
+---
 
-📊 Dashboard Highlights
-Wait List Comparison
-
-Latest Month: 709K
-
-Previous Year Same Month: 640K
-
-Wait List Bifurcation (Case Type)
-
-Top 5 Specialties with Highest Wait Lists
-
-📈 Visualizations
-Monthly trends from July 2018 to January 2021
-
-Age profile vs time band waitlist analysis
-
-Specialty hotspots
-
-Patient status breakdown
-
-Geographic filtering by district
-
-🧠 Smart Filters
-Archive_Date
-
-Specialty_Name
-
-Case_Type
-
-⚙️ Tools Used
-Power BI
-
-Excel (Data Preprocessing)
-
-GitHub (Version Control)
+- Inpatient / Outpatient (source split)
+- Mapping_Specialty (lookup for specialty grouping)
