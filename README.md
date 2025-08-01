@@ -65,13 +65,16 @@ Each row in the dataset represents a patient entry in the healthcare waitlist an
    ## 📚 Folder Structure
 
 ```
-/healthcare-powerbi-project/
+Healthcare-Waitlist-Dashboard/
 │
-├── HealthcareDashboard.pbix
-├── README.md
-└── /screenshots/
-    ├── overview.png
-    └── other_visuals.png
+├── Data/
+│
+├── dashboard_screenshot.png
+│
+├── Healthcare_Waitlist_Dashboard.pbix
+│
+└── README.md
+
 ```
 
 - DAX (Measures and Calculated Columns)
